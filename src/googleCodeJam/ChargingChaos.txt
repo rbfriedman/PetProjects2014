@@ -1,0 +1,51 @@
+package googleCodeJam;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class ChargingChaos {
+	private int numTests;
+	private Scanner read;
+	private PrintWriter print;
+	public ChargingChaos(File file) throws FileNotFoundException {
+		long milli = System.currentTimeMillis();
+		read = new Scanner(file);
+		print = new PrintWriter(new File("results.txt"));
+		//Logic
+			//read number test cases
+			//process(numCases,len);
+		print.close();
+		read.close();
+		System.out.println(System.currentTimeMillis()-milli);
+	}
+	public static void main(String[] args) throws FileNotFoundException {
+		// TODO Auto-generated method stub
+		ChargingChaos b = new ChargingChaos(new File("A-small-practice.in"));
+	}
+	public String process(int num,int len){
+		boolean[][] initialBools = new boolean[num][len];
+		boolean[][] specifiedBools = new boolean[num][len];
+		for(int i =0 ; i <num;i++){
+			for(int k =0; k <len;k++){
+			initialBools[i][k] = read.nextBoolean();
+			}
+		}
+	read.nextLine();
+		for(int i =0 ; i <num;i++){
+			for(int k =0; k <len;k++){
+			specifiedBools[i][k] = read.nextBoolean();
+			}
+		}
+read.nextLine();
+		HashMap<boolean[]> specifiedVals = new HashMap<boolean[]>();
+		for(boolean[] b:initialBools){
+			specifiedVals.put(initialBools);
+		}
+		//Initialize arrays
+		//Read cases
+	}
+
+
+}
