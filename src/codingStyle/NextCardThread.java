@@ -19,7 +19,7 @@ public class NextCardThread extends Thread {
 			jp.repaint();
 			this.jp.repaint();
 			
-				this.sleep(60*1000);
+				this.sleep(2000);
 			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
